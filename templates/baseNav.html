@@ -12,7 +12,8 @@
 
             {% for object in object_list %}
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'homepage' pk=object.pk %}">{{ object.title }} <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'homepage' pk=object.pk %}">{{ object.title }} <span
+                            class="sr-only">(current)</span></a>
                 </li>
             {% endfor %}
 
@@ -22,7 +23,7 @@
                 <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
             {% else %}
                 <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
-                <a class="btn btn-primary" href="">Register</a>
+                <a class="btn btn-primary" href="{% url 'register' %}">Register</a>
             {% endif %}
 
         </div>
