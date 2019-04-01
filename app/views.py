@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, DetailView, TemplateView, ListView
+from django.views.generic import CreateView, DetailView, TemplateView
 from .forms import UserCreateForm
 from .models import PagesModel
 
@@ -21,7 +21,7 @@ class PagesDetailView(DetailView):
     template_name = 'homePage.html'
     model = PagesModel
 
-
-class PagesListView(ListView):
-    template_name = 'baseNav.html.html'
-    model = PagesModel
+    def get_context_data(self, **kwargs):
+        contenxt = super(PagesDetailView, self).get_context_data(**kwargs)
+        contenxt['object_list'] = PagesModel.objects.all()
+        return contenxt
