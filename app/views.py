@@ -8,7 +8,7 @@ from .models import PagesModel, IndexModel
 # Create your views here.
 
 def home_page(request):
-    return redirect('index', pk=2)
+    return redirect('index', pk=1)
 
 class IndePage(DetailView): 
     template_name = 'index.html'
