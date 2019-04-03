@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DetailView, TemplateView
 from .forms import UserCreateForm
@@ -7,8 +7,8 @@ from .models import PagesModel
 
 # Create your views here.
 
-class IndexPage(TemplateView):
-    template_name = 'index.html'
+def home_page(request):
+    return redirect('homepage', pk=1)
 
 
 class SignUpCreateView(CreateView):
@@ -18,7 +18,7 @@ class SignUpCreateView(CreateView):
 
 
 class PagesDetailView(DetailView):
-    template_name = 'homePage.html'
+    template_name = 'index.html'
     model = PagesModel
 
     def get_context_data(self, **kwargs):
