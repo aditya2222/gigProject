@@ -1592,40 +1592,10 @@ input, select, textarea {
 
 /* Banner */
 
-	#banner-wrapper {
-		background: #c8d2bc url(images/bg1.png);
-		padding: 2em 0;
-	}
 
-	#banner {
-		position: relative;
-		width: 100%;
-		padding: 6em 0;
-		border-radius: 10px;
-		background-image: url(images/banner.jpg);
-		background-size: cover;
-		text-align: center;
-		box-shadow: inset 0 0 0 20px #fff;
-	}
 
-		#banner h2 {
-			font-size: 3.3em;
-			color: #fff;
-			text-align: center;
-			letter-spacing: -2px;
-			margin: 0;
-		}
 
-		#banner span {
-			display: block;
-			left: 0;
-			margin: 0.5em 0 0 0;
-			font-size: 1.6em;
-			color: #fff;
-			letter-spacing: -1px;
-			text-transform: lowercase;
-			opacity: 0.8;
-		}
+
 
 /* Main */
 

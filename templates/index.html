@@ -18,11 +18,48 @@
 	<meta name="classification" content="INDEXCLASSIFICATION" />
 
 	<style>
-		#nav a {
+		#banner {
+			position: relative;
+			width: 100%;
+			padding: 6em 0;
+			border-radius: 10px;
+			background-image: url('{{object.bannerImage.url}}');
+			background-size: cover;
+			text-align: center;
+			box-shadow: inset 0 0 0 20px #fff;
+		}
+
+		#banner-wrapper {
+			background: #c8d2bc url('');
+			padding: 2em 0;
+		}
+
+		#banner h2 {
+			font-size: 3.3em;
+			color: #fff;
+			text-align: center;
+			letter-spacing: -2px;
+			margin: 0;
+		}
+
+		#banner span {
+			display: block;
+			left: 0;
+			margin: 0.5em 0 0 0;
+			font-size: 1.6em;
+			color: #fff;
+			letter-spacing: -1px;
+			text-transform: lowercase;
+			opacity: 0.8;
+		}
+
+
+		nav a {
 			text-transform: capitalize;
 		}
 
-		#logo {
+
+		logo {
 			text-transform: capitalize;
 		}
 
@@ -73,7 +110,7 @@
 					<div class="col-4 col-12-medium">
 
 						<section>
-							<h2>{{object.idnexLeftHeader}}</h2>
+							<h2>{{object.indexLeftHeader}}</h2>
 							<p><strong>{{object.indexLeftHeaderContent}}</strong> </p>
 
 						</section>
@@ -106,18 +143,25 @@
 									<div class="col-6">
 										<ul class="link-list">
 
-											<li><a href="#" target="_blank">{{object.indirectLink1}}</a></li>
-											<li><a href="#" target="_blank">{{object.indirectLink2}}</a></li>
-											<li><a href="#" target="_blank">{{object.indirectLink3}}</a></li>
-											<li><a href="#" target="_blank">{{object.indirectLink4}}</a></li>
+											<li><a href="{{object.indirectLink1}}"
+													target="_blank">{{object.indirectLink1Text}}</a></li>
+											<li><a href="{{object.indirectLink2}}"
+													target="_blank">{{object.indirectLink2Text}}</a></li>
+											<li><a href="{{object.indirectLink3}}"
+													target="_blank">{{object.indirectLink3Text}}</a></li>
+											<li><a href="{{object.indirectLink4}}"
+													target="_blank">{{object.indirectLink4Text}}</a></li>
 										</ul>
 									</div>
 									<div class="col-6">
 										<ul class="link-list">
 
-											<li><a href="#" target="_blank">{{object.indirectLink5}}</a></li>
-											<li><a href="#" target="_blank">{{object.indirectLink6}}</a></li>
-											<li><a href="#" target="_blank">{{object.indirectLink7}}</a></li>
+											<li><a href="{{object.indirectLink5}}"
+													target="_blank">{{object.indirectLink5Text}}</a></li>
+											<li><a href="{{object.indirectLink6}}"
+													target="_blank">{{object.indirectLink6Text}}</a></li>
+											<li><a href="{{object.indirectLink7}}"
+													target="_blank">{{object.indirectLink7Text}}</a></li>
 
 										</ul>
 									</div>

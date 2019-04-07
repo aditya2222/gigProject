@@ -21,8 +21,8 @@
 
 						<header id="header">
 							<h1><a href="index.html" id="logo">{{object.title}}</a></h1>
-
 						</header>
+						<p style="color:white">{{object.description}}</p>
 
 					</div>
 				</div>
@@ -40,6 +40,7 @@
 
 							<p>{{object.p1middle}}</p>
 							<p>{{object.p2middle}}</p>
+							<p>{{object.content}}</p>
 						</section>
 
 					</div>
@@ -52,7 +53,7 @@
 									<a href="{{object.logolink}}" target="_blank"><img src="{{object.logopath.url}}"
 											alt="{{object.logoalt}}" class="left" /></a>
 									<h4>{{object.phone}}</h4>
-									<h4>{{object.email}} </h4>
+									<h4><a href="mailto:{{object.email}}">{{object.email}} </a></h4>
 									<h4>{{object.h4name}}</h4>
 								</li>
 
