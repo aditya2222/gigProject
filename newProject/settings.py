@@ -1,3 +1,5 @@
+import django_heroku
+import dj_database_url
 """
 Django settings for newProject project.
 
@@ -54,8 +56,7 @@ ROOT_URLCONF = 'newProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,20 +74,19 @@ WSGI_APPLICATION = 'newProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-#DATABASES = {
-#      'default': {
-#          'ENGINE': 'django.db.backends.sqlite3',
-#          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#      }
-#  }
-
-import dj_database_url
-
 DATABASES = {
-   'default': dj_database_url.config(
-       default='postgres://zeudttsjlilvjo:ad4829456b51420bfb34b90f2a497e9bdb65ea5589772b416466019501fbab89@ec2-174-129-10-235.compute-1.amazonaws.com:5432/d97rntgc9n7rij'
-   )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
+
+
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default='postgres://zeudttsjlilvjo:ad4829456b51420bfb34b90f2a497e9bdb65ea5589772b416466019501fbab89@ec2-174-129-10-235.compute-1.amazonaws.com:5432/d97rntgc9n7rij'
+#     )
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -130,7 +130,6 @@ LOGOUT_REDIRECT_URL = 'homepage'
 
 LOGIN_REDIRECT_URL = 'homepage'
 
-import django_heroku
 
 django_heroku.settings(locals())
 

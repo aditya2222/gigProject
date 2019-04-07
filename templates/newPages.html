@@ -1,134 +1,142 @@
 {%load static%}
-<!DOCTYPE HTML> 
+<!DOCTYPE HTML>
 <html>
-	<head>
-		<title>TITLE</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{%static 'assets/css/main.css'%}" />
-		<meta name="keywords" content="KEYWORDS ">
-		<meta name="DESCRIPTION" content="CONTENT">
-	</head>
-	<body>
-		<div id="page-wrapper">
-			<!-- Header -->
-			<div id="header-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
 
-							<header id="header">
-								<h1><a href="index.html" id="logo">{{object.headerTitle}}</a></h1>
+<head>
+	<title>TITLE</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{%static 'assets/css/main.css'%}" />
+	<meta name="keywords" content="KEYWORDS ">
+	<meta name="DESCRIPTION" content="CONTENT">
+</head>
 
-							</header>
+<body>
+	<div id="page-wrapper">
+		<!-- Header -->
+		<div id="header-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
 
-						</div>
+						<header id="header">
+							<h1><a href="index.html" id="logo">{{object.title}}</a></h1>
+
+						</header>
+
 					</div>
 				</div>
 			</div>
-
-			<!-- Main -->
-			<div id="main">
-				<div class="container">
-					<div class="row main-row">
-						<div class="col-8 col-12-medium">
-
-							<section>
-								<h2>{{object.p1Middle}} </h2>
-
-								<p>{{object.p1Middle}}</p>
-							</section>
-
-						</div>
-						<div class="col-4 col-12-medium">
-
-							<section>
-								<h2>{{object.h2name2}}</h2>
-								<ul class="small-image-list">
-									<li>
-										<a href="LOGOLINK" target="_blank"><img src="LOGOPATH" alt="LOGOALT" class="left" /></a>
-										<h4>PHONE</h4>
-										<h4>EMAIL </h4>
-									</li>
-
-								</ul>
-							</section>
-
-							<section>
-								<h2>{{object.h2more}}</h2>
-								<div>
-									<div class="row">
-										<div class="col-6 col-12-small">
-											<ul class="link-list">
-												<li><a href="LINK1" target="_blank">{{object.Link1Text}}</a></li>
-												<li><a href="LINK1" target="_blank">{{object.Link2Text}}</a></li>
-												<li><a href="LINK1" target="_blank">{{object.Link3Text}}</a></li>
-												<li><a href="LINK1" target="_blank">{{object.Link4Text}}</a></li>
-
-											</ul>
-										</div>
-										<div class="col-6 col-12-small"> <ul class="link-list">
-												<li><a href="LINK1" target="_blank">{{object.Link5Text}}</a></li>
-												<li><a href="LINK1" target="_blank">{{object.Link6Text}}</a></li>
-												<li><a href="LINK1" target="_blank">{{object.Link7Text}}</a></li>
-												<li><a href="LINK1" target="_blank">{{object.Link8Text}}</a></li>
-
-											</ul>
-										</div>
-									</div>
-								</div>
-							</section>
-
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Footer -->
-			<div id="footer-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="col-8 col-12-medium">
-
-							<section>
-
-								<h2>{{object.footerTitle}} </h2> 
-								<div class="row">
-									<ul class="link-list">
-
-										{% for object in object_list%}
-
-										<li><a href="{% url 'homepage' pk=object.pk %}" target="_blank">{{object.headerTitle}}</a></li>
-
-
-										{%endfor%}
-
-									</ul>
-								</div>
-							</section>
-
-						</div>
-						<div class="col-4 col-12-medium">
-
-							<section>
-								<h2>{{object.footerTitle2}}</h2>
-								<p>{{object.footerTitle2}}</p>
-
-							</section>
-
-						</div>
-					</div>
-				</div>
-			</div>
-
 		</div>
 
-		<!-- Scripts -->
-		<script src="{%static 'assets/js/jquery.min.js'%}"></script>
-		<script src="{%static 'assets/js/browser.min.js'%}"></script>
-		<script src="{%static 'assets/js/breakpoints.min.js'%}"></script>
-		<script src="{%static 'assets/js/util.js'%}"></script>
-		<script src="{%static 'assets/js/main.js'%}"></script>
+		<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row main-row">
+					<div class="col-8 col-12-medium">
 
-	</body>
+						<section>
+							<h2>{{object.h2name1}} </h2>
+
+							<p>{{object.p1middle}}</p>
+							<p>{{object.p2middle}}</p>
+						</section>
+
+					</div>
+					<div class="col-4 col-12-medium">
+
+						<section>
+							<h2>{{object.h2name2}}</h2>
+							<ul class="small-image-list">
+								<li>
+									<a href="{{object.logolink}}" target="_blank"><img src="{{object.logopath.url}}"
+											alt="{{object.logoalt}}" class="left" /></a>
+									<h4>{{object.phone}}</h4>
+									<h4>{{object.email}} </h4>
+									<h4>{{object.h4name}}</h4>
+								</li>
+
+							</ul>
+						</section>
+
+						<section>
+							<h2>{{object.h2more}}</h2>
+							<div>
+								<div class=" row">
+									<div class="col-6 col-12-small">
+										<ul class="link-list">
+											<li><a href="{{object.link1}}" target="_blank">{{object.link1text}}</a></li>
+											<li><a href="{{object.link2}}" target="_blank">{{object.link2text}}</a></li>
+											<li><a href="{{object.link3}}" target="_blank">{{object.link3text}}</a></li>
+											<li><a href="{{object.link4}}" target="_blank">{{object.link4text}}</a></li>
+
+										</ul>
+									</div>
+									<div class="col-6 col-12-small">
+										<ul class="link-list">
+											<li><a href="{{object.link5}}" target="_blank">{{object.link5text}}</a></li>
+											<li><a href="{{object.link6}}" target="_blank">{{object.link6text}}</a></li>
+											<li><a href="{{object.link7}}" target="_blank">{{object.link7text}}</a></li>
+											<li><a href="{{object.link8}}" target="_blank">{{object.link8text}}</a></li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<div id="footer-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-8 col-12-medium">
+
+						<section>
+
+							<h2>{{object.footerTitle}} </h2>
+							<div class="row">
+								<ul class="link-list">
+
+									{% for object in object_list%}
+
+									<li><a href="{% url 'homepage' pk=object.pk %}" target="_blank">{{object.title}}</a>
+									</li>
+
+
+									{%endfor%}
+
+								</ul>
+							</div>
+						</section>
+
+					</div>
+					<div class="col-4 col-12-medium">
+
+						<section>
+							<h2>{{object.footerTitle2}}</h2>
+							<p>{{object.footerp1}}</p>
+							<a href="{{object.footerLink}}">{{object.footerLinkText}}</a>
+
+						</section>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="{%static 'assets/js/jquery.min.js'%}"></script>
+	<script src="{%static 'assets/js/browser.min.js'%}"></script>
+	<script src="{%static 'assets/js/breakpoints.min.js'%}"></script>
+	<script src="{%static 'assets/js/util.js'%}"></script>
+	<script src="{%static 'assets/js/main.js'%}"></script>
+
+</body>
+
 </html>
-

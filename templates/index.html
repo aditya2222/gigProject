@@ -6,192 +6,180 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>INDEX TITLE</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{%static 'assets/css/main.css'%}" />
-		<meta name="keywords" content="INDEXKEYWORDS">
-		<meta name="description" content="INDEXCONTENT">
-		<meta name="revisit-after" content="5 days" />
-		<meta name="classification" content="INDEXCLASSIFICATION" />
 
-		<style>
-#nav a {
-	text-transform: capitalize;	
-}
+<head>
+	<title>INDEX TITLE</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{%static 'assets/css/main.css'%}" />
+	<meta name="keywords" content="INDEXKEYWORDS">
+	<meta name="description" content="INDEXCONTENT">
+	<meta name="revisit-after" content="5 days" />
+	<meta name="classification" content="INDEXCLASSIFICATION" />
 
-	#logo {
-		text-transform: capitalize;
-	}
+	<style>
+		#nav a {
+			text-transform: capitalize;
+		}
 
-	h2 {
-		text-transform: capitalize;
-	}
+		#logo {
+			text-transform: capitalize;
+		}
 
-
-		</style>
-
-
-	</head>
-	<body>
-		<div id="page-wrapper">
-
-			<!-- Header -->
-			<div id="header-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-
-							<header id="header">
-								<h1><a href="index.html" id="logo">{{object.indexTitle}}</a></h1>
-
-							</header>
-
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Banner -->
-			<div id="banner-wrapper">
-				<div class="container">
-
-					<div id="banner">
-						<h2> {{object.indexBodyHeader}}</h2>
-						<span>{{object.indexBodySubHeader}}</span>
-
-					</div>
-
-				</div>
-			</div>
-
-			<!-- Main -->
-			<div id="main">
-				<div class="container">
-					<div class="row main-row">
-						<div class="col-4 col-12-medium">
-
-							<section>
-								<h2>{{object.idnexLeftHeader}}</h2>
-								<p><strong>{{object.indexLeftHeaderContent}}</strong> </p>
-
-							</section>
-
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-
-							<section>
-								<h2>{{object.indexFeatured}}</h2>
-								<ul class="small-image-list">
-									<li>
-										<a href="INDEXFEATUREDLINK" target="_blank"><img src="INDEXFEATUREDIMAGE" alt="INDEXFEATUREDALT" class="left" /></a>
-										<h4>INDEXFEATUREDH4</h4>
-										<p>INDEXFEATUREDP</p>
-
-									</li>
-
-								</ul>
-							</section>
-
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-
-							<section>
-								<h2>Direct Links</h2>
-								<div>
-									<div class="row">
-										<div class="col-6 col-12-small">
-											<ul class="link-list">
-
-												{% for foo in objects %}
-												<li><a href="{% url 'homepage' pk=foo.pk %}" target="_blank">{{foo.headerTitle}}</a></li>
-												{% endfor %}
+		h2 {
+			text-transform: capitalize;
+		}
+	</style>
 
 
+</head>
 
-											</ul>
-										</div>
-									</div>
-								</div>
-							</section>
+<body>
+	<div id="page-wrapper">
 
-						</div>
+		<!-- Header -->
+		<div id="header-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
 
+						<header id="header">
+							<h1><a href="index.html" id="logo">{{object.indexHeaderTitle}}</a></h1>
+
+						</header>
 
 					</div>
 				</div>
 			</div>
-
-			<!-- Footer -->
-			<div id="footer-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="col-8 col-12-medium">
-
-							<section>
-								<h2>{{object.FooterTitle}}</h2> 
-								<div>
-									<div class="row">
-										<div class="col-3 col-6-medium col-12-small">
-											<ul class="link-list">
-												<li><a href=" LINK TO NEWPAGE2" target="_blank">NEWPAGE2TITLE</a></li>
-												<li><a href=" LINK TO NEWPAGE3" target="_blank">NEWPAGE3TITLE</a></li>
-												<li><a href=" LINK TO NEWPAGE4" target="_blank">NEWPAGE4TITLE</a></li>
-
-											</ul>
-										</div>
-										<div class="col-3 col-6-medium col-12-small">
-											<ul class="link-list">
-												<li><a href=" LINK TO NEWPAGE5" target="_blank">NEWPAGE5TITLE</a></li>
-												<li><a href=" LINK TO NEWPAGE6" target="_blank">NEWPAGE6TITLE</a></li>
-												<li><a href=" LINK TO NEWPAGE7" target="_blank">NEWPAGE7TITLE</a></li>
-
-											</ul>
-										</div>
-										<div class="col-3 col-6-medium col-12-small">
-											<ul class="link-list">
-												<li><a href=" LINK TO NEWPAGE8" target="_blank">NEWPAGE8TITLE</a></li>
-												<li><a href=" LINK TO NEWPAGE9" target="_blank">NEWPAGE9TITLE</a></li>
-												<li><a href=" LINK TO NEWPAGE10" target="_blank">NEWPAGE10TITLE</a></li>
-
-
-											</ul>
-										</div>
-									</div>
-								</div>
-							</section>
-
-						</div>
-						<div class="col-4 col-12-medium">
-
-							<section>
-								<h2>{{object.FooterTitle2}}</h2>
-								<p>FOOTERP1</p>
-								<li><a href="FOOTERLINK" target="_blank">FOOTERLINKTEXT</a></li>
-
-							</section>
-
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-
-
-
-						</div>
-					</div>
-				</div>
-			</div>
-
 		</div>
 
-		<!-- Scripts -->
-		<script src="{%static 'assets/js/jquery.min.js'%}"></script>
-		<script src="{%static 'assets/js/browser.min.js'%}"></script>
-		<script src="{%static 'assets/js/breakpoints.min.js'%}"></script>
-		<script src="{%static 'assets/js/util.js'%}"></script>
-		<script src="{%static 'assets/js/main.js'%}"></script>
+		<!-- Banner -->
+		<div id="banner-wrapper">
+			<div class="container">
 
-	</body>
+				<div id="banner">
+					<h2> {{object.indexBannerText}}</h2>
+					<span>{{object.indexBannerText2}}</span>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row main-row">
+					<div class="col-4 col-12-medium">
+
+						<section>
+							<h2>{{object.idnexLeftHeader}}</h2>
+							<p><strong>{{object.indexLeftHeaderContent}}</strong> </p>
+
+						</section>
+
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+
+						<section>
+							<h2>{{object.indexFeatured}}</h2>
+							<ul class="small-image-list">
+								<li>
+									<a href="{{object.indexFeaturedLink}}" target="_blank"><img
+											src="{{object.indexFeaturedImage.url}}" alt="INDEXFEATUREDALT"
+											class="left" /></a>
+									<h4>{{object.indexFeaturedh4}}</h4>
+									<p>{{object.indexFeaturedP}}</p>
+
+								</li>
+
+							</ul>
+						</section>
+
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+
+						<section>
+							<h2>Direct Links</h2>
+							<div>
+								<div class="row">
+									<div class="col-6">
+										<ul class="link-list">
+
+											<li><a href="#" target="_blank">{{object.indirectLink1}}</a></li>
+											<li><a href="#" target="_blank">{{object.indirectLink2}}</a></li>
+											<li><a href="#" target="_blank">{{object.indirectLink3}}</a></li>
+											<li><a href="#" target="_blank">{{object.indirectLink4}}</a></li>
+										</ul>
+									</div>
+									<div class="col-6">
+										<ul class="link-list">
+
+											<li><a href="#" target="_blank">{{object.indirectLink5}}</a></li>
+											<li><a href="#" target="_blank">{{object.indirectLink6}}</a></li>
+											<li><a href="#" target="_blank">{{object.indirectLink7}}</a></li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-8 col-12-medium">
+
+						<section>
+							<h2>{{object.footerTitle}}</h2>
+							<div>
+								<div class="row">
+									<div class="col-3 col-6-medium col-12-small">
+										<ul class="link-list">
+
+											{% for object in objects %}
+											<li><a href="pages/{{object.id}}" target="_blank">{{object}}</a></li>
+											{% endfor %}
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+
+					</div>
+					<div class="col-4 col-12-medium">
+
+						<section>
+							<h2>{{object.footerTitle2}}</h2>
+							<p>{{object.footerp1}}</p>
+							<a href="{{object.footerLink}}">{{object.footerLinkText}}</a>
+
+						</section>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="{%static 'assets/js/jquery.min.js'%}"></script>
+	<script src="{%static 'assets/js/browser.min.js'%}"></script>
+	<script src="{%static 'assets/js/breakpoints.min.js'%}"></script>
+	<script src="{%static 'assets/js/util.js'%}"></script>
+	<script src="{%static 'assets/js/main.js'%}"></script>
+
+</body>
+
 </html>
