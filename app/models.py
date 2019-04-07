@@ -78,6 +78,8 @@ class IndexModel(models.Model):
     indirectLink6Text = models.CharField(max_length=120, null=True, blank=True)
     indirectLink7 = models.CharField(max_length=120, null=True, blank=True)
     indirectLink7Text = models.CharField(max_length=120, null=True, blank=True)
+    indirectLink8 = models.CharField(max_length=120, null=True, blank=True)
+    indirectLink8text = models.CharField(max_length=120, null=True, blank=True)
     footerTitle = models.CharField(max_length=120, blank=True, null=True)
     footerTitle2 = models.CharField(max_length=120, blank=True, null=True)
     footerp1 = models.CharField(max_length=120, blank=True, null=True)
